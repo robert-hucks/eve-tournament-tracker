@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "/Users/robert/Library/Application Support/Herd/bin/php85",
+            "args": [
+                "/Users/robert/Documents/projects/eve-tournament-tracker/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
