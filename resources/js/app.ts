@@ -5,36 +5,29 @@ import PrimeVue from 'primevue/config';
 
 const preset = definePreset(Aura, {
     semantic: {
-        primary: {
-            50: '{surface.50}',
-            100: '{surface.100}',
-            200: '{surface.200}',
-            300: '{surface.300}',
-            400: '{surface.400}',
-            500: '{surface.500}',
-            600: '{surface.600}',
-            700: '{surface.700}',
-            800: '{surface.800}',
-            900: '{surface.900}',
-            950: '{surface.950}',
-            color: 'light-dark({primary.950}, {primary.50})',
-            contrastColor: 'light-dark(#ffffff, {primary.950})',
-            hoverColor: 'light-dark({primary.800}, {primary.200})',
-            activeColor: 'light-dark({primary.700}, {primary.300})',
+        typography: {
+            fontFamily: 'Inter',
         },
-        highlight: {
-            background: 'light-dark({primary.950}, {primary.50})',
-            focusBackground: 'light-dark({primary.700}, {primary.300})',
-            color: 'light-dark(#ffffff, {primary.950})',
-            focusColor: 'light-dark(#ffffff, {primary.950})',
+        primary: {
+            50: '{orange.50}',
+            100: '{orange.100}',
+            200: '{orange.200}',
+            300: '{orange.300}',
+            400: '{orange.400}',
+            500: '{orange.500}',
+            600: '{orange.600}',
+            700: '{orange.700}',
+            800: '{orange.800}',
+            900: '{orange.900}',
+            950: '{orange.950}',
         },
     },
 });
 
-const title = import.meta.env.VITE_APP_NAME;
+const appTitle: string = import.meta.env.VITE_APP_NAME;
 
 createInertiaApp({
-    title: (title) => (title ? `${title} | ${title}` : title),
+    title: (title) => (title ? `${appTitle} | ${title}` : title),
     progress: {
         color: '#4B5563',
     },
@@ -43,7 +36,6 @@ createInertiaApp({
             theme: {
                 preset: preset,
                 options: {
-                    darkModeSelector: false,
                     cssLayer: {
                         name: 'primevue',
                         order: 'theme, base, primevue',

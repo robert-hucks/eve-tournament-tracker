@@ -1,2 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --color-panel-background: #15171C;
+    --color-panel-background-hover: #1C1F26;
+    --color-panel-border: #2A2E37;
+}

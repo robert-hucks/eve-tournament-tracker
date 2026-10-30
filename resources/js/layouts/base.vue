@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { Link } from '@inertiajs/vue3';
+import NavBar from '@/components/navBar.vue';
 
 </script>
 
 <template>
-    <div class="absolute w-full">
-        <nav class="relative top-0 flex flex-row justify-end gap-2 shadow p-2">
-            <Link href="#">...</Link>
-        </nav>
+    <div class="relative mt-18">
+        <NavBar class="fixed top-0" />
 
-        <slot />
+        <div class="px-4">
+            <slot />
+        </div>
     </div>
 </template>
